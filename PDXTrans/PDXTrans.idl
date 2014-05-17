@@ -1,0 +1,71 @@
+// PDXTrans.idl : IDL source for PDXTrans.dll
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (PDXTrans.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+import "Dxtrans.idl";
+
+
+typedef enum DXZOOMSTYLE
+{
+    DXZS_IN,
+    DXZS_OUT
+} DXZOOMSTYLE;
+
+typedef enum DXPANDAZOOMDISPID
+{
+    DISPID_DXZ_ZoomStyle = DISPID_DXE_NEXT_ID,
+    DISPID_DXZ_Copyright
+} DXPANDAZOOMDISPID;
+
+
+	[
+		object,
+		uuid(A8C11F74-5007-4CE5-9A5E-84E2ABA9C860),
+		dual,
+		helpstring("IDXTPandaZoom Interface"),
+		pointer_default(unique)
+	]
+	interface IDXTPandaZoom : IDXEffect
+	{
+		[propget, id(DISPID_DXZ_ZoomStyle)]
+			HRESULT ZoomStyle( [out, retval]DXZOOMSTYLE *pVal );
+		[propput, id(DISPID_DXZ_ZoomStyle)]
+			HRESULT ZoomStyle( [in]DXZOOMSTYLE newVal );
+		[propget, id(DISPID_DXZ_Copyright)]
+			HRESULT Copyright( [out, retval]BSTR *pVal );
+		[propput, id(DISPID_DXZ_Copyright)]
+			HRESULT Copyright( [in]BSTR newVal );
+	};
+
+[
+	uuid(A97EAC80-2065-4C0A-B49F-EFCD57DEE374),
+	version(1.0),
+	helpstring("PDXTrans 1.0 Type Library")
+]
+library PDXTRANSLib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+	[
+		uuid(0977FFA2-3591-41E6-A6B4-6C8171032649),
+		helpstring("PandaZoom Class")
+	]
+	coclass PandaZoom
+	{
+		[default] interface IDXTPandaZoom;
+	};
+
+	[
+		uuid(7AFECA03-E284-4ED7-AD05-BB763BBB1393),
+		helpstring("PandaZoomPP Class")
+	]
+	coclass PandaZoomPP
+	{
+		interface IUnknown;
+	};
+};

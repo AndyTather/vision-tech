@@ -1,0 +1,304 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (United Kingdom) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENG)
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_UK
+#pragma code_page(1252)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#include ""res\\Saver.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "\r\n"
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "#include ""afxres.rc""  // Standard components\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\Saver.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 34, 22, 218, 126
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About Vision Technician Saver"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "Vision Technician Saver",IDC_STATIC,40,10,119,8
+    LTEXT           "Copyright © 2000-2010  Andy Tather",IDC_STATIC,40,34,119,8
+    DEFPUSHBUTTON   "OK",IDOK,166,8,41,14,WS_GROUP
+    CTEXT           "EMail: Support@andytather.co.uk",IDC_STATIC,15,89,181,8
+    CTEXT           "WebSite: http://www.andytather.co.uk",IDC_STATIC,15,100,181,8
+    GROUPBOX        "",IDC_STATIC,11,79,195,37
+    LTEXT           "Version 4.0",IDC_STATIC,40,22,74,8
+    LTEXT           "Image Formats Supported: BMP, GIF, JPG, PNG\nVideo Formats Supported: ASF, AVI, MOV, MPG, MPEG, WMV",IDC_STATIC,18,50,183,25
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKRECT | SS_SUNKEN,7,46,201,1
+END
+
+IDD_MODEPAGE DIALOGEX 0, 0, 237, 106
+STYLE DS_SETFONT | DS_3DLOOK | WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Mode Selection"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    PUSHBUTTON      "&Browse...",IDC_BROWSE_DIR,172,39,46,12
+    GROUPBOX        "Picture/Video Directory",IDC_STATIC,7,7,221,65
+    EDITTEXT        IDC_DIRECTORY,17,20,201,14,ES_AUTOHSCROLL | ES_READONLY
+    CONTROL         "Include Sub-Folders",IDC_SUBDIRSCHECK,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,18,40,93,10
+    PUSHBUTTON      "Default",IDC_DEFAULT,112,39,46,12
+    PUSHBUTTON      "Next Slide >>",IDC_FORCE,14,78,47,13
+    CONTROL         "Shuffle",IDC_PSEUDORANDOM,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,18,55,89,10
+END
+
+IDD_PROPPAGE2 DIALOG 0, 0, 237, 106
+STYLE DS_SETFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Slide Settings"
+FONT 8, "MS Sans Serif"
+BEGIN
+    GROUPBOX        "Slide Duration (in Seconds)",IDC_STATIC,7,7,223,41
+    CONTROL         "Slider2",IDC_SLIDETIME,"msctls_trackbar32",TBS_AUTOTICKS | WS_TABSTOP,38,20,156,25
+    CONTROL         "Display Filename on slide",IDC_SHOWNAMECHECK,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,69,79,133,10
+    LTEXT           "Fast",IDC_STATIC,17,25,14,8
+    LTEXT           "Slow",IDC_STATIC,199,25,16,8
+    CONTROL         "Show Frame Rate",IDC_SHOWFRAMERATE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,69,60,103,10
+END
+
+IDD_WIPEPAGE DIALOG 0, 0, 237, 106
+STYLE DS_SETFONT | DS_3DLOOK | WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Transform Effects"
+FONT 8, "MS Sans Serif"
+BEGIN
+    GROUPBOX        "Wipe Effects",IDC_STATIC,7,7,223,34
+    CONTROL         "Run in &sequence",IDC_WIPE_SEQ,"Button",BS_AUTORADIOBUTTON,85,21,77,10
+    CONTROL         "&Random",IDC_WIPE_RANDOM,"Button",BS_AUTORADIOBUTTON,169,21,50,10
+    CONTROL         "&No Effects",IDC_WIPE_NONE,"Button",BS_AUTORADIOBUTTON,18,21,58,10
+    GROUPBOX        "Effect Duration (in Seconds)",IDC_STATIC,7,46,223,41
+    CONTROL         "Slider1",IDC_WIPE_TIME,"msctls_trackbar32",TBS_AUTOTICKS | WS_TABSTOP,73,59,146,24
+    CONTROL         "Use Default",IDC_EFFECTTIMEDEF,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,15,64,53,10
+END
+
+IDD_VIDEOPAGE DIALOG 0, 0, 237, 106
+STYLE DS_SETFONT | DS_3DLOOK | WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Video"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "Include Videos",IDC_ALLOWVIDEOCHECK,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,20,27,70,10
+    CONTROL         "Mute Video Audio",IDC_MUTECHECK,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,100,27,87,10
+    GROUPBOX        "Options",-1,7,7,223,45
+END
+
+IDD_MULTIMON DIALOGEX 0, 0, 237, 106
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Multi-Monitor"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "Primary Display only",IDC_MM_PRIMARY,"Button",BS_AUTORADIOBUTTON,47,21,80,10
+    CONTROL         "Use Virtual Destop",IDC_MM_VD,"Button",BS_AUTORADIOBUTTON,47,39,75,10
+    CONTROL         "All displays as Clone",IDC_MM_CLONE,"Button",BS_AUTORADIOBUTTON,47,56,78,10
+    CONTROL         "All displays random",IDC_MM_INDIE,"Button",BS_AUTORADIOBUTTON,47,74,89,10
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 3,0,0,14
+ PRODUCTVERSION 3,0,0,14
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080904b0"
+        BEGIN
+            VALUE "FileDescription", "Vision Technician Screen Saver"
+            VALUE "FileVersion", "3, 0, 0, 14"
+            VALUE "InternalName", "Vision Saver 2004"
+            VALUE "LegalCopyright", "Copyright © 2004"
+            VALUE "OriginalFilename", "VisionSaver.scr"
+            VALUE "ProductName", "Vision Technician Screen Saver"
+            VALUE "ProductVersion", "3, 0, 0, 14"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x809, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Cursor
+//
+
+IDC_NULLCURSOR          CURSOR                  "res\\cursor1.cur"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        RIGHTMARGIN, 217
+    END
+
+    IDD_MODEPAGE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 230
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 98
+    END
+
+    IDD_PROPPAGE2, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 230
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 98
+    END
+
+    IDD_WIPEPAGE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 230
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 98
+    END
+
+    IDD_VIDEOPAGE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 230
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 98
+    END
+
+    IDD_MULTIMON, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 230
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 99
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_MONITOR             BITMAP                  "res\\Monitor.bmp"
+IDB_MONITOR2            BITMAP                  "res\\Monitor2.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    ID_INDICATOR_EXT        "EXT"
+    ID_INDICATOR_CAPS       "CAP"
+    ID_INDICATOR_NUM        "NUM"
+    ID_INDICATOR_SCRL       "SCRL"
+    ID_INDICATOR_OVR        "OVR"
+    ID_INDICATOR_REC        "REC"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_ABOUTBOX            "&About Vision Saver..."
+    IDS_SCREENSAVER         "This is a screen saver and can not be run as a standalone executable."
+    IDS_PROPSHT_CAPTION     "Vision Technician Screen Saver"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_DESCRIPTION         "Vision Saver"
+END
+
+#endif    // English (United Kingdom) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#include "res\Saver.rc2"  // non-Microsoft Visual C++ edited resources
+
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+#include "afxres.rc"  // Standard components
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

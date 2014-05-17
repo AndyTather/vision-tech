@@ -1,0 +1,1331 @@
+// Created by Microsoft (R) C/C++ Compiler Version 12.00.8168.0 (4686c102).
+//
+// dxtmsft.tli
+//
+// Wrapper implementations for Win32 type library e:\winnt\system32\dxtmsft.dll
+// compiler-generated file created 04/06/99 at 20:12:02 - DO NOT EDIT!
+
+#pragma once
+
+//
+// interface IDXTComposite wrapper method implementations
+//
+
+inline void IDXTComposite::PutFunction ( enum DXCOMPFUNC peFunc ) {
+    HRESULT _hr = put_Function(peFunc);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline enum DXCOMPFUNC IDXTComposite::GetFunction ( ) {
+    enum DXCOMPFUNC _result;
+    HRESULT _hr = get_Function(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+//
+// interface IDXDLUTBuilder wrapper method implementations
+//
+
+inline long IDXDLUTBuilder::GetNumBuildSteps ( ) {
+    long _result;
+    HRESULT _hr = get_NumBuildSteps(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline _variant_t IDXDLUTBuilder::GetBuildOrder ( ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = get_BuildOrder(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+inline void IDXDLUTBuilder::PutBuildOrder ( VARIANT * pOpOrder ) {
+    HRESULT _hr = put_BuildOrder(pOpOrder);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline float IDXDLUTBuilder::GetGamma ( ) {
+    float _result;
+    HRESULT _hr = get_Gamma(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IDXDLUTBuilder::PutGamma ( float pVal ) {
+    HRESULT _hr = put_Gamma(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline float IDXDLUTBuilder::GetOpacity ( ) {
+    float _result;
+    HRESULT _hr = get_Opacity(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IDXDLUTBuilder::PutOpacity ( float pVal ) {
+    HRESULT _hr = put_Opacity(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _variant_t IDXDLUTBuilder::GetBrightness ( ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = get_Brightness(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+inline void IDXDLUTBuilder::PutBrightness ( VARIANT * pWeights ) {
+    HRESULT _hr = put_Brightness(pWeights);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _variant_t IDXDLUTBuilder::GetContrast ( ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = get_Contrast(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+inline void IDXDLUTBuilder::PutContrast ( VARIANT * pWeights ) {
+    HRESULT _hr = put_Contrast(pWeights);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _variant_t IDXDLUTBuilder::GetColorBalance ( enum DXLUTCOLOR Color ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = get_ColorBalance(Color, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+inline void IDXDLUTBuilder::PutColorBalance ( enum DXLUTCOLOR Color, VARIANT * pWeights ) {
+    HRESULT _hr = put_ColorBalance(Color, pWeights);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline long IDXDLUTBuilder::GetLevelsPerChannel ( ) {
+    long _result;
+    HRESULT _hr = get_LevelsPerChannel(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IDXDLUTBuilder::PutLevelsPerChannel ( long pVal ) {
+    HRESULT _hr = put_LevelsPerChannel(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline float IDXDLUTBuilder::GetInvert ( ) {
+    float _result;
+    HRESULT _hr = get_Invert(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IDXDLUTBuilder::PutInvert ( float pThreshold ) {
+    HRESULT _hr = put_Invert(pThreshold);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline float IDXDLUTBuilder::GetThreshold ( ) {
+    float _result;
+    HRESULT _hr = get_Threshold(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IDXDLUTBuilder::PutThreshold ( float pVal ) {
+    HRESULT _hr = put_Threshold(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+//
+// interface IDXLUTBuilder wrapper method implementations
+//
+
+inline HRESULT IDXLUTBuilder::GetNumBuildSteps ( unsigned long * pulNumSteps ) {
+    HRESULT _hr = raw_GetNumBuildSteps(pulNumSteps);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IDXLUTBuilder::GetBuildOrder ( enum OPIDDXLUTBUILDER * OpOrder, unsigned long ulSize ) {
+    HRESULT _hr = raw_GetBuildOrder(OpOrder, ulSize);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IDXLUTBuilder::SetBuildOrder ( enum OPIDDXLUTBUILDER * OpOrder, unsigned long ulNumSteps ) {
+    HRESULT _hr = raw_SetBuildOrder(OpOrder, ulNumSteps);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IDXLUTBuilder::SetGamma ( float newVal ) {
+    HRESULT _hr = raw_SetGamma(newVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IDXLUTBuilder::GetGamma ( float * pVal ) {
+    HRESULT _hr = raw_GetGamma(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IDXLUTBuilder::GetOpacity ( float * pVal ) {
+    HRESULT _hr = raw_GetOpacity(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IDXLUTBuilder::SetOpacity ( float newVal ) {
+    HRESULT _hr = raw_SetOpacity(newVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IDXLUTBuilder::GetBrightness ( unsigned long * pulCount, float * Weights ) {
+    HRESULT _hr = raw_GetBrightness(pulCount, Weights);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IDXLUTBuilder::SetBrightness ( unsigned long ulCount, float * Weights ) {
+    HRESULT _hr = raw_SetBrightness(ulCount, Weights);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IDXLUTBuilder::GetContrast ( unsigned long * pulCount, float * Weights ) {
+    HRESULT _hr = raw_GetContrast(pulCount, Weights);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IDXLUTBuilder::SetContrast ( unsigned long ulCount, float * Weights ) {
+    HRESULT _hr = raw_SetContrast(ulCount, Weights);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IDXLUTBuilder::GetColorBalance ( enum DXLUTCOLOR Color, unsigned long * pulCount, float * Weights ) {
+    HRESULT _hr = raw_GetColorBalance(Color, pulCount, Weights);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IDXLUTBuilder::SetColorBalance ( enum DXLUTCOLOR Color, unsigned long ulCount, float * Weights ) {
+    HRESULT _hr = raw_SetColorBalance(Color, ulCount, Weights);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IDXLUTBuilder::GetLevelsPerChannel ( unsigned long * pVal ) {
+    HRESULT _hr = raw_GetLevelsPerChannel(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IDXLUTBuilder::SetLevelsPerChannel ( unsigned long newVal ) {
+    HRESULT _hr = raw_SetLevelsPerChannel(newVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IDXLUTBuilder::GetInvert ( float * pThreshold ) {
+    HRESULT _hr = raw_GetInvert(pThreshold);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IDXLUTBuilder::SetInvert ( float Threshold ) {
+    HRESULT _hr = raw_SetInvert(Threshold);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IDXLUTBuilder::GetThreshold ( float * pVal ) {
+    HRESULT _hr = raw_GetThreshold(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IDXLUTBuilder::SetThreshold ( float newVal ) {
+    HRESULT _hr = raw_SetThreshold(newVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// interface IDXBaseObject wrapper method implementations
+//
+
+inline HRESULT IDXBaseObject::GetGenerationId ( unsigned long * pID ) {
+    HRESULT _hr = raw_GetGenerationId(pID);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IDXBaseObject::IncrementGenerationId ( long bRefresh ) {
+    HRESULT _hr = raw_IncrementGenerationId(bRefresh);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IDXBaseObject::GetObjectSize ( unsigned long * pcbSize ) {
+    HRESULT _hr = raw_GetObjectSize(pcbSize);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// interface IDXLookupTable wrapper method implementations
+//
+
+inline HRESULT IDXLookupTable::GetTables ( unsigned char RedLUT[256], unsigned char GreenLUT[256], unsigned char BlueLUT[256], unsigned char AlphaLUT[256] ) {
+    HRESULT _hr = raw_GetTables(RedLUT, GreenLUT, BlueLUT, AlphaLUT);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IDXLookupTable::IsChannelIdentity ( struct DXBASESAMPLE * pSampleBools ) {
+    HRESULT _hr = raw_IsChannelIdentity(pSampleBools);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IDXLookupTable::GetIndexValues ( unsigned long Index, struct DXBASESAMPLE * pSample ) {
+    HRESULT _hr = raw_GetIndexValues(Index, pSample);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IDXLookupTable::ApplyTables ( struct DXSAMPLE * pSamples, unsigned long cSamples ) {
+    HRESULT _hr = raw_ApplyTables(pSamples, cSamples);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// interface IDXTGradientD wrapper method implementations
+//
+
+inline void IDXTGradientD::PutGradientType ( enum DXGRADIENTTYPE peType ) {
+    HRESULT _hr = put_GradientType(peType);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline enum DXGRADIENTTYPE IDXTGradientD::GetGradientType ( ) {
+    enum DXGRADIENTTYPE _result;
+    HRESULT _hr = get_GradientType(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IDXTGradientD::PutStartColor ( unsigned long pVal ) {
+    HRESULT _hr = put_StartColor(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline unsigned long IDXTGradientD::GetStartColor ( ) {
+    unsigned long _result;
+    HRESULT _hr = get_StartColor(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IDXTGradientD::PutEndColor ( unsigned long pVal ) {
+    HRESULT _hr = put_EndColor(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline unsigned long IDXTGradientD::GetEndColor ( ) {
+    unsigned long _result;
+    HRESULT _hr = get_EndColor(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IDXTGradientD::PutGradientWidth ( long pVal ) {
+    HRESULT _hr = put_GradientWidth(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline long IDXTGradientD::GetGradientWidth ( ) {
+    long _result;
+    HRESULT _hr = get_GradientWidth(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IDXTGradientD::PutGradientHeight ( long pVal ) {
+    HRESULT _hr = put_GradientHeight(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline long IDXTGradientD::GetGradientHeight ( ) {
+    long _result;
+    HRESULT _hr = get_GradientHeight(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IDXTGradientD::PutKeepAspectRatio ( VARIANT_BOOL pVal ) {
+    HRESULT _hr = put_KeepAspectRatio(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline VARIANT_BOOL IDXTGradientD::GetKeepAspectRatio ( ) {
+    VARIANT_BOOL _result;
+    HRESULT _hr = get_KeepAspectRatio(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IDXTGradientD::PutStartColorStr ( _bstr_t _arg1 ) {
+    HRESULT _hr = put_StartColorStr(_arg1);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline void IDXTGradientD::PutEndColorStr ( _bstr_t _arg1 ) {
+    HRESULT _hr = put_EndColorStr(_arg1);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+//
+// interface IDXEffect wrapper method implementations
+//
+
+inline long IDXEffect::GetCapabilities ( ) {
+    long _result;
+    HRESULT _hr = get_Capabilities(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline float IDXEffect::GetProgress ( ) {
+    float _result;
+    HRESULT _hr = get_Progress(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IDXEffect::PutProgress ( float pVal ) {
+    HRESULT _hr = put_Progress(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline float IDXEffect::GetStepResolution ( ) {
+    float _result;
+    HRESULT _hr = get_StepResolution(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline float IDXEffect::GetDuration ( ) {
+    float _result;
+    HRESULT _hr = get_Duration(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IDXEffect::PutDuration ( float pVal ) {
+    HRESULT _hr = put_Duration(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+//
+// interface IDXTWipe wrapper method implementations
+//
+
+inline float IDXTWipe::GetGradientSize ( ) {
+    float _result;
+    HRESULT _hr = get_GradientSize(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IDXTWipe::PutGradientSize ( float pPercentSize ) {
+    HRESULT _hr = put_GradientSize(pPercentSize);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline enum DXWIPEDIRECTION IDXTWipe::GetWipeStyle ( ) {
+    enum DXWIPEDIRECTION _result;
+    HRESULT _hr = get_WipeStyle(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IDXTWipe::PutWipeStyle ( enum DXWIPEDIRECTION pVal ) {
+    HRESULT _hr = put_WipeStyle(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+//
+// interface IDXTConvolution wrapper method implementations
+//
+
+inline HRESULT IDXTConvolution::SetFilterType ( enum DXCONVFILTERTYPE eType ) {
+    HRESULT _hr = raw_SetFilterType(eType);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IDXTConvolution::GetFilterType ( enum DXCONVFILTERTYPE * peType ) {
+    HRESULT _hr = raw_GetFilterType(peType);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IDXTConvolution::SetCustomFilter ( float * pFilter, struct tagSIZE Size ) {
+    HRESULT _hr = raw_SetCustomFilter(pFilter, Size);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IDXTConvolution::SetConvertToGray ( long bConvertToGray ) {
+    HRESULT _hr = raw_SetConvertToGray(bConvertToGray);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IDXTConvolution::GetConvertToGray ( long * pbConvertToGray ) {
+    HRESULT _hr = raw_GetConvertToGray(pbConvertToGray);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IDXTConvolution::SetBias ( float Bias ) {
+    HRESULT _hr = raw_SetBias(Bias);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IDXTConvolution::GetBias ( float * pBias ) {
+    HRESULT _hr = raw_GetBias(pBias);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IDXTConvolution::SetExcludeAlpha ( long bExcludeAlpha ) {
+    HRESULT _hr = raw_SetExcludeAlpha(bExcludeAlpha);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IDXTConvolution::GetExcludeAlpha ( long * pbExcludeAlpha ) {
+    HRESULT _hr = raw_GetExcludeAlpha(pbExcludeAlpha);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// interface ICrBlur wrapper method implementations
+//
+
+inline VARIANT_BOOL ICrBlur::GetMakeShadow ( ) {
+    VARIANT_BOOL _result;
+    HRESULT _hr = get_MakeShadow(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void ICrBlur::PutMakeShadow ( VARIANT_BOOL pVal ) {
+    HRESULT _hr = put_MakeShadow(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline float ICrBlur::GetShadowOpacity ( ) {
+    float _result;
+    HRESULT _hr = get_ShadowOpacity(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void ICrBlur::PutShadowOpacity ( float pVal ) {
+    HRESULT _hr = put_ShadowOpacity(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline float ICrBlur::GetPixelRadius ( ) {
+    float _result;
+    HRESULT _hr = get_PixelRadius(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void ICrBlur::PutPixelRadius ( float pPixelRadius ) {
+    HRESULT _hr = put_PixelRadius(pPixelRadius);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+//
+// interface ICrEmboss wrapper method implementations
+//
+
+inline float ICrEmboss::GetBias ( ) {
+    float _result;
+    HRESULT _hr = get_Bias(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void ICrEmboss::PutBias ( float pVal ) {
+    HRESULT _hr = put_Bias(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+//
+// interface ICrEngrave wrapper method implementations
+//
+
+inline float ICrEngrave::GetBias ( ) {
+    float _result;
+    HRESULT _hr = get_Bias(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void ICrEngrave::PutBias ( float pVal ) {
+    HRESULT _hr = put_Bias(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+//
+// interface IDXTFade wrapper method implementations
+//
+
+inline float IDXTFade::GetOverlap ( ) {
+    float _result;
+    HRESULT _hr = get_Overlap(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IDXTFade::PutOverlap ( float pVal ) {
+    HRESULT _hr = put_Overlap(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline long IDXTFade::GetCenter ( ) {
+    long _result;
+    HRESULT _hr = get_Center(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IDXTFade::PutCenter ( long pVal ) {
+    HRESULT _hr = put_Center(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+//
+// interface IDXBasicImage wrapper method implementations
+//
+
+inline int IDXBasicImage::GetRotation ( ) {
+    int _result;
+    HRESULT _hr = get_Rotation(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IDXBasicImage::PutRotation ( int pVal ) {
+    HRESULT _hr = put_Rotation(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline long IDXBasicImage::GetMirror ( ) {
+    long _result;
+    HRESULT _hr = get_Mirror(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IDXBasicImage::PutMirror ( long pVal ) {
+    HRESULT _hr = put_Mirror(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline long IDXBasicImage::GetGrayScale ( ) {
+    long _result;
+    HRESULT _hr = get_GrayScale(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IDXBasicImage::PutGrayScale ( long pVal ) {
+    HRESULT _hr = put_GrayScale(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline float IDXBasicImage::GetOpacity ( ) {
+    float _result;
+    HRESULT _hr = get_Opacity(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IDXBasicImage::PutOpacity ( float pVal ) {
+    HRESULT _hr = put_Opacity(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline long IDXBasicImage::GetInvert ( ) {
+    long _result;
+    HRESULT _hr = get_Invert(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IDXBasicImage::PutInvert ( long pVal ) {
+    HRESULT _hr = put_Invert(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline long IDXBasicImage::GetXRay ( ) {
+    long _result;
+    HRESULT _hr = get_XRay(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IDXBasicImage::PutXRay ( long pVal ) {
+    HRESULT _hr = put_XRay(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline long IDXBasicImage::GetMask ( ) {
+    long _result;
+    HRESULT _hr = get_Mask(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IDXBasicImage::PutMask ( long pVal ) {
+    HRESULT _hr = put_Mask(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline int IDXBasicImage::GetMaskColor ( ) {
+    int _result;
+    HRESULT _hr = get_MaskColor(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IDXBasicImage::PutMaskColor ( int pVal ) {
+    HRESULT _hr = put_MaskColor(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+//
+// interface IDXPixelate wrapper method implementations
+//
+
+inline int IDXPixelate::GetMaxSquare ( ) {
+    int _result;
+    HRESULT _hr = get_MaxSquare(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IDXPixelate::PutMaxSquare ( int pVal ) {
+    HRESULT _hr = put_MaxSquare(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+//
+// interface ICrIris wrapper method implementations
+//
+
+inline _bstr_t ICrIris::GetirisStyle ( ) {
+    BSTR _result;
+    HRESULT _hr = get_irisStyle(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void ICrIris::PutirisStyle ( _bstr_t pVal ) {
+    HRESULT _hr = put_irisStyle(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+//
+// interface ICrSlide wrapper method implementations
+//
+
+inline short ICrSlide::Getbands ( ) {
+    short _result;
+    HRESULT _hr = get_bands(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void ICrSlide::Putbands ( short pVal ) {
+    HRESULT _hr = put_bands(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t ICrSlide::GetslideStyle ( ) {
+    BSTR _result;
+    HRESULT _hr = get_slideStyle(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void ICrSlide::PutslideStyle ( _bstr_t pVal ) {
+    HRESULT _hr = put_slideStyle(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+//
+// interface ICrRadialWipe wrapper method implementations
+//
+
+inline _bstr_t ICrRadialWipe::GetWipeStyle ( ) {
+    BSTR _result;
+    HRESULT _hr = get_WipeStyle(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void ICrRadialWipe::PutWipeStyle ( _bstr_t pVal ) {
+    HRESULT _hr = put_WipeStyle(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+//
+// interface ICrBlinds wrapper method implementations
+//
+
+inline short ICrBlinds::Getbands ( ) {
+    short _result;
+    HRESULT _hr = get_bands(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void ICrBlinds::Putbands ( short pVal ) {
+    HRESULT _hr = put_bands(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+//
+// interface ICrStretch wrapper method implementations
+//
+
+inline _bstr_t ICrStretch::GetstretchStyle ( ) {
+    BSTR _result;
+    HRESULT _hr = get_stretchStyle(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void ICrStretch::PutstretchStyle ( _bstr_t pVal ) {
+    HRESULT _hr = put_stretchStyle(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+//
+// interface ICrSpiral wrapper method implementations
+//
+
+inline short ICrSpiral::GetgridSizeX ( ) {
+    short _result;
+    HRESULT _hr = get_gridSizeX(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void ICrSpiral::PutgridSizeX ( short pX ) {
+    HRESULT _hr = put_gridSizeX(pX);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline short ICrSpiral::GetgridSizeY ( ) {
+    short _result;
+    HRESULT _hr = get_gridSizeY(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void ICrSpiral::PutgridSizeY ( short pY ) {
+    HRESULT _hr = put_gridSizeY(pY);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+//
+// interface ICrZigzag wrapper method implementations
+//
+
+inline short ICrZigzag::GetgridSizeX ( ) {
+    short _result;
+    HRESULT _hr = get_gridSizeX(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void ICrZigzag::PutgridSizeX ( short pX ) {
+    HRESULT _hr = put_gridSizeX(pX);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline short ICrZigzag::GetgridSizeY ( ) {
+    short _result;
+    HRESULT _hr = get_gridSizeY(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void ICrZigzag::PutgridSizeY ( short pY ) {
+    HRESULT _hr = put_gridSizeY(pY);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+//
+// interface ICrWheel wrapper method implementations
+//
+
+inline short ICrWheel::Getspokes ( ) {
+    short _result;
+    HRESULT _hr = get_spokes(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void ICrWheel::Putspokes ( short pX ) {
+    HRESULT _hr = put_spokes(pX);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+//
+// interface IDXTChroma wrapper method implementations
+//
+
+inline void IDXTChroma::PutColor ( const _variant_t & pVal ) {
+    HRESULT _hr = put_Color(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _variant_t IDXTChroma::GetColor ( ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = get_Color(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+//
+// interface IDXTDropShadow wrapper method implementations
+//
+
+inline _variant_t IDXTDropShadow::GetColor ( ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = get_Color(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+inline void IDXTDropShadow::PutColor ( const _variant_t & pVal ) {
+    HRESULT _hr = put_Color(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline int IDXTDropShadow::GetOffX ( ) {
+    int _result;
+    HRESULT _hr = get_OffX(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IDXTDropShadow::PutOffX ( int pVal ) {
+    HRESULT _hr = put_OffX(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline int IDXTDropShadow::GetOffY ( ) {
+    int _result;
+    HRESULT _hr = get_OffY(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IDXTDropShadow::PutOffY ( int pVal ) {
+    HRESULT _hr = put_OffY(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline VARIANT_BOOL IDXTDropShadow::GetPositive ( ) {
+    VARIANT_BOOL _result;
+    HRESULT _hr = get_Positive(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IDXTDropShadow::PutPositive ( VARIANT_BOOL pVal ) {
+    HRESULT _hr = put_Positive(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+//
+// interface IDXTMetaRoll wrapper method implementations
+//
+
+inline _bstr_t IDXTMetaRoll::GetCopyright ( ) {
+    BSTR _result;
+    HRESULT _hr = get_Copyright(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IDXTMetaRoll::PutCopyright ( _bstr_t pVal ) {
+    HRESULT _hr = put_Copyright(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+//
+// interface IDXTMetaRipple wrapper method implementations
+//
+
+inline _bstr_t IDXTMetaRipple::GetCopyright ( ) {
+    BSTR _result;
+    HRESULT _hr = get_Copyright(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IDXTMetaRipple::PutCopyright ( _bstr_t pVal ) {
+    HRESULT _hr = put_Copyright(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+//
+// interface IDXTMetaPageTurn wrapper method implementations
+//
+
+inline _bstr_t IDXTMetaPageTurn::GetCopyright ( ) {
+    BSTR _result;
+    HRESULT _hr = get_Copyright(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IDXTMetaPageTurn::PutCopyright ( _bstr_t pVal ) {
+    HRESULT _hr = put_Copyright(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+//
+// interface IDXTMetaLiquid wrapper method implementations
+//
+
+inline _bstr_t IDXTMetaLiquid::GetCopyright ( ) {
+    BSTR _result;
+    HRESULT _hr = get_Copyright(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IDXTMetaLiquid::PutCopyright ( _bstr_t pVal ) {
+    HRESULT _hr = put_Copyright(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+//
+// interface IDXTMetaCenterPeel wrapper method implementations
+//
+
+inline _bstr_t IDXTMetaCenterPeel::GetCopyright ( ) {
+    BSTR _result;
+    HRESULT _hr = get_Copyright(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IDXTMetaCenterPeel::PutCopyright ( _bstr_t pVal ) {
+    HRESULT _hr = put_Copyright(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+//
+// interface IDXTMetaPeelSmall wrapper method implementations
+//
+
+inline _bstr_t IDXTMetaPeelSmall::GetCopyright ( ) {
+    BSTR _result;
+    HRESULT _hr = get_Copyright(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IDXTMetaPeelSmall::PutCopyright ( _bstr_t pVal ) {
+    HRESULT _hr = put_Copyright(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+//
+// interface IDXTMetaPeelPiece wrapper method implementations
+//
+
+inline _bstr_t IDXTMetaPeelPiece::GetCopyright ( ) {
+    BSTR _result;
+    HRESULT _hr = get_Copyright(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IDXTMetaPeelPiece::PutCopyright ( _bstr_t pVal ) {
+    HRESULT _hr = put_Copyright(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+//
+// interface IDXTMetaPeelSplit wrapper method implementations
+//
+
+inline _bstr_t IDXTMetaPeelSplit::GetCopyright ( ) {
+    BSTR _result;
+    HRESULT _hr = get_Copyright(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IDXTMetaPeelSplit::PutCopyright ( _bstr_t pVal ) {
+    HRESULT _hr = put_Copyright(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+//
+// interface IDXTMetaWater wrapper method implementations
+//
+
+inline _bstr_t IDXTMetaWater::GetCopyright ( ) {
+    BSTR _result;
+    HRESULT _hr = get_Copyright(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IDXTMetaWater::PutCopyright ( _bstr_t pVal ) {
+    HRESULT _hr = put_Copyright(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+//
+// interface IDXTMetaLightWipe wrapper method implementations
+//
+
+inline _bstr_t IDXTMetaLightWipe::GetCopyright ( ) {
+    BSTR _result;
+    HRESULT _hr = get_Copyright(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IDXTMetaLightWipe::PutCopyright ( _bstr_t pVal ) {
+    HRESULT _hr = put_Copyright(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+//
+// interface IDXTMetaRadialScaleWipe wrapper method implementations
+//
+
+inline _bstr_t IDXTMetaRadialScaleWipe::GetCopyright ( ) {
+    BSTR _result;
+    HRESULT _hr = get_Copyright(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IDXTMetaRadialScaleWipe::PutCopyright ( _bstr_t pVal ) {
+    HRESULT _hr = put_Copyright(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+//
+// interface IDXTMetaWhiteOut wrapper method implementations
+//
+
+inline _bstr_t IDXTMetaWhiteOut::GetCopyright ( ) {
+    BSTR _result;
+    HRESULT _hr = get_Copyright(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IDXTMetaWhiteOut::PutCopyright ( _bstr_t pVal ) {
+    HRESULT _hr = put_Copyright(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+//
+// interface IDXTMetaTwister wrapper method implementations
+//
+
+inline _bstr_t IDXTMetaTwister::GetCopyright ( ) {
+    BSTR _result;
+    HRESULT _hr = get_Copyright(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IDXTMetaTwister::PutCopyright ( _bstr_t pVal ) {
+    HRESULT _hr = put_Copyright(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+//
+// interface IDXTMetaBurnFilm wrapper method implementations
+//
+
+inline _bstr_t IDXTMetaBurnFilm::GetCopyright ( ) {
+    BSTR _result;
+    HRESULT _hr = get_Copyright(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IDXTMetaBurnFilm::PutCopyright ( _bstr_t pVal ) {
+    HRESULT _hr = put_Copyright(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+//
+// interface IDXTMetaJaws wrapper method implementations
+//
+
+inline _bstr_t IDXTMetaJaws::GetCopyright ( ) {
+    BSTR _result;
+    HRESULT _hr = get_Copyright(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IDXTMetaJaws::PutCopyright ( _bstr_t pVal ) {
+    HRESULT _hr = put_Copyright(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+//
+// interface IDXTMetaColorFade wrapper method implementations
+//
+
+inline _bstr_t IDXTMetaColorFade::GetCopyright ( ) {
+    BSTR _result;
+    HRESULT _hr = get_Copyright(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IDXTMetaColorFade::PutCopyright ( _bstr_t pVal ) {
+    HRESULT _hr = put_Copyright(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+//
+// interface IDXTMetaFlowMotion wrapper method implementations
+//
+
+inline _bstr_t IDXTMetaFlowMotion::GetCopyright ( ) {
+    BSTR _result;
+    HRESULT _hr = get_Copyright(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IDXTMetaFlowMotion::PutCopyright ( _bstr_t pVal ) {
+    HRESULT _hr = put_Copyright(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+//
+// interface IDXTMetaVacuum wrapper method implementations
+//
+
+inline _bstr_t IDXTMetaVacuum::GetCopyright ( ) {
+    BSTR _result;
+    HRESULT _hr = get_Copyright(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IDXTMetaVacuum::PutCopyright ( _bstr_t pVal ) {
+    HRESULT _hr = put_Copyright(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+//
+// interface IDXTMetaGriddler wrapper method implementations
+//
+
+inline _bstr_t IDXTMetaGriddler::GetCopyright ( ) {
+    BSTR _result;
+    HRESULT _hr = get_Copyright(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IDXTMetaGriddler::PutCopyright ( _bstr_t pVal ) {
+    HRESULT _hr = put_Copyright(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+//
+// interface IDXTMetaGriddler2 wrapper method implementations
+//
+
+inline _bstr_t IDXTMetaGriddler2::GetCopyright ( ) {
+    BSTR _result;
+    HRESULT _hr = get_Copyright(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IDXTMetaGriddler2::PutCopyright ( _bstr_t pVal ) {
+    HRESULT _hr = put_Copyright(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+//
+// interface IDXTMetaThreshold wrapper method implementations
+//
+
+inline _bstr_t IDXTMetaThreshold::GetCopyright ( ) {
+    BSTR _result;
+    HRESULT _hr = get_Copyright(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IDXTMetaThreshold::PutCopyright ( _bstr_t pVal ) {
+    HRESULT _hr = put_Copyright(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+//
+// interface IDXTMetaWormHole wrapper method implementations
+//
+
+inline _bstr_t IDXTMetaWormHole::GetCopyright ( ) {
+    BSTR _result;
+    HRESULT _hr = get_Copyright(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IDXTMetaWormHole::PutCopyright ( _bstr_t pVal ) {
+    HRESULT _hr = put_Copyright(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}

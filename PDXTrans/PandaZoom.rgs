@@ -1,0 +1,27 @@
+HKCR
+{
+	DXImageTransform.Pandasoft.PandaZoom.1 = s 'Pandasofts Zoomer'
+	{
+		CLSID = s '{0977FFA2-3591-41E6-A6B4-6C8171032649}'
+	}
+	DXImageTransform.Pandasoft.PandaZoom = s 'Pandasofts Zoomer'
+	{
+		CLSID = s '{0977FFA2-3591-41E6-A6B4-6C8171032649}'
+		CurVer = s 'DXImageTransform.Pandasoft.PandaZoom.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {0977FFA2-3591-41E6-A6B4-6C8171032649} = s 'Pandasofts Zoomer'
+		{
+			ProgID = s 'DXImageTransform.Pandasoft.PandaZoom.1'
+			VersionIndependentProgID = s 'DXImageTransform.Pandasoft.PandaZoom'
+			ForceRemove 'Programmable'
+			ToolBoxBitmap32 = s '%MODULE%,235'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Both'
+			}
+			'TypeLib' = s '{A97EAC80-2065-4C0A-B49F-EFCD57DEE374}'
+		}
+	}
+}

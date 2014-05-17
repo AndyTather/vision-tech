@@ -1,0 +1,23 @@
+HKCR
+{
+	PDXTrans.PandaZoomPP.1 = s 'PandaZoomPP Class'
+	{
+		CLSID = s '{7AFECA03-E284-4ED7-AD05-BB763BBB1393}'
+	}
+	PDXTrans.PandaZoomPP = s 'PandaZoomPP Class'
+	{
+		CLSID = s '{7AFECA03-E284-4ED7-AD05-BB763BBB1393}'
+		CurVer = s 'PDXTrans.PandaZoomPP.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {7AFECA03-E284-4ED7-AD05-BB763BBB1393} = s 'PandaZoomPP Class'
+		{
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Both'
+			}
+		}
+	}
+}
